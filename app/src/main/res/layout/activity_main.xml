@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#98AA74"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="PhotoPhly Connector"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_info_text"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="----"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_stop"
+                style="@style/common_button"
+                android:layout_gravity="center_horizontal"
+                android:text="Stop Virt. Sticks" />
+
+            <Button
+                android:id="@+id/btn_start"
+                style="@style/common_button"
+                android:layout_gravity="center_horizontal"
+                android:text="Start Virt. Sticks" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_logout"
+                style="@style/common_button"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="79dp"
+                android:text="Logout" />
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/common_button"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="79dp"
+                android:text="Login to DJI" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_photo"
+            style="@style/common_button"
+            android:layout_gravity="center_horizontal"
+            android:text="Take Single Photo" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextureView
+            android:id="@+id/video_previewer_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_weight="1"
+            android:animationCache="false" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/battLevelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Battery:" />
+
+        <ProgressBar
+            android:id="@+id/battBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/binding_state_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Binding State:"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_binding_state_info"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Unknown"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/activation_state_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="11dp"
+            android:text="App Activation State:"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_activation_state_info"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="Unknown"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_RINEX_start"
+                style="@style/common_button"
+                android:layout_gravity="center_horizontal"
+                android:text="Start RINEX" />
+
+            <Button
+                android:id="@+id/btn_RINEX_stop"
+                style="@style/common_button"
+                android:layout_gravity="center_horizontal"
+                android:text="Stop RINEX" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_RINEX_text"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="RINEX logging: off"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>
