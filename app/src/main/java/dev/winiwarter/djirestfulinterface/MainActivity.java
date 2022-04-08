@@ -550,6 +550,9 @@ public class MainActivity extends AppCompatActivity implements  TextureView.Surf
         public void run(int counter) {
             if (!waiting) {
                 waiting = true;
+                // this line starts the RINEX acquisition
+                // if the interrupt in P4RTK is fixed, move this line to
+                // onClick() to replace startRINEX()
 
                 DJIApplication.getAircraftInstance()
                         .getFlightController().getRTK().setPPKModeEnabled(true, new CommonCallbacks.CompletionCallback() {
