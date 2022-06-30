@@ -488,6 +488,9 @@ public class MainActivity extends AppCompatActivity implements  TextureView.Surf
     }
 
     private void startVirtualSticks(){
+        PhotoPhlyState pps = handleGetState();
+        float alt = (float)pps.locatt.height;  // hold current altitude if QGIS is not sending anything yet
+        throttle = alt;
         FlightController flightController = ModuleVerificationUtil.getFlightController();
         flightController.setVirtualStickModeEnabled(true, new CommonCallbacks.CompletionCallback() {
             @Override
